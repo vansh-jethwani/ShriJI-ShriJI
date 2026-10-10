@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f2e8">
+  <title>Shreeji & Shreeji | Thoughtfully Gifted</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="products.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    A LITTLE JOY, BEAUTIFULLY PACKED
+    <span>✦</span>
+    MADE FOR SHARING
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <span class="monogram">S<span>✦</span>S</span>
+      <span class="brand-text">
+        SHRIJI <i>&</i> SHRIJI
+        <small>FESTIVE HAMPERS & SWEETS</small>
+      </span>
+    </a>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#collection">Our hampers</a>
+      <a href="#story">Our philosophy</a>
+    </nav>
+
+    <a class="header-cta" href="#collection">Explore collection ↗</a>
+    <button id="menu" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">— THE ART OF GIVING</p>
+        <h1>Gifts that feel<br><em>like a warm hug.</em></h1>
+        <p class="lead">
+          Thoughtfully put together, beautifully presented,
+          and made to bring people a little closer.
+        </p>
+        <a class="button" href="#collection">
+          Discover our hampers <span>↘</span>
+        </a>
+        <p class="handwritten">
+          ✳ &nbsp; Made for celebrations, big and small.
+        </p>
+      </div>
+
+      <div class="hero-art">
+        <img
+          src="https://www.farmaan.in/cdn/shop/files/Rakhi_Hamper_1299_dc52775f-1963-41a0-b09b-35cfdcd4b880.jpg?v=1754642899"
+          alt="Beautifully wrapped gift box"
+        >
+        <div class="image-caption">
+          THE GIFTING EDIT
+          <strong>Little moments.<br>Lasting memories.</strong>
+        </div>
+        <div class="stamp">
+          CURATED WITH CARE
+          <b>✳</b>
+          SHARED WITH LOVE
+        </div>
+      </div>
+    </section>
+
+    <div class="ribbon">
+      <span>GOOD THINGS ARE MEANT TO BE SHARED</span>
+      ✳
+      <span>ROOTED IN TRADITION, WRAPPED WITH LOVE</span>
+      ✳
+      <span>MADE FOR YOUR MOMENTS</span>
+    </div>
+
+    <section class="collection" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">— A BOX FULL OF HAPPINESS</p>
+          <h2>Find your kind<br><em>of thoughtful.</em></h2>
+        </div>
+        <p>
+          From festive favourites to little tokens of appreciation,
+          explore hampers made to make someone feel special.
+        </p>
+      </div>
+
+      <div class="toolbar">
+        <div id="filters" class="filters"></div>
+        <label class="search">
+          ⌕
+          <input
+            id="search"
+            type="search"
+            placeholder="Find a hamper..."
+            aria-label="Search hampers"
+          >
+        </label>
+      </div>
+
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden>
+        No hampers match your search. Try another name or category.
+      </p>
+
+      <p class="hint">
+        ✳ &nbsp; Every hamper has a story. Click one to explore what's inside.
+      </p>
+    </section>
+
+    <section class="closing" id="story">
+      <p class="eyebrow">A THOUGHTFUL LITTLE SOMETHING</p>
+      <h2>Because the best gifts<br>say <em>"I thought of you."</em></h2>
+      <a href="#collection">Explore the collection ↗</a>
+      <span class="flower">✳</span>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home">
+      <span class="monogram">S<span>✦</span>S</span>
+      <span class="brand-text">
+        SHREEJI <i>&</i> SHREEJI
+        <small>FESTIVE HAMPERS & SWEETS</small>
+      </span>
+    </a>
+    <p>Thoughtfully packed. Beautifully gifted.</p>
+    <small>© <span id="year"></span> Shreeji & Shreeji</small>
+  </footer>
+
+  <!-- Hamper details popup -->
+  <div class="backdrop" id="modal" hidden>
+    <section
+      class="dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="detail-name"
+    >
+      <button id="close" class="close" aria-label="Close details">×</button>
+
+      <div class="detail-cover">
+        <img id="detail-image" alt="">
+        <span>A LITTLE BOX OF JOY</span>
+      </div>
+
+      <div class="detail-content">
+        <p class="eyebrow">— INSIDE THE HAMPER</p>
+        <p id="detail-category" class="category"></p>
+        <h2 id="detail-name"></h2>
+        <p id="detail-description" class="description"></p>
+        <p id="detail-price" class="price"></p>
+
+        <div class="items-heading">
+          <h3>Made up of lovely things</h3>
+          <span id="count"></span>
+        </div>
+
+        <div id="items" class="items"></div>
+
+        <p class="disclaimer">
+          Contents and weights are displayed for showcase purposes.
+          Please contact the store for current availability.
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

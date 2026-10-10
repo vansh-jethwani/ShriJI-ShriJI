@@ -1,0 +1,69 @@
+/* Shreeji & Shreeji — light ivory + sage theme only */
+:root {
+  --cream: #f7f8f2;
+  --paper: #ffffff;
+  --sand: #e9efe4;
+  --brown: #263d32;
+  --brown2: #3f5b4c;
+  --muted: #68796e;
+  --gold: #b8a36a;
+  --rust: #68856c;
+  --line: rgba(38, 61, 50, 0.16);
+}
+
+body { background: var(--cream); color: var(--brown); }
+.announcement { background: #344f40; color: #f7f8f1; }
+.announcement span { color: #e2d4a2; }
+.header { background: rgba(247, 248, 242, 0.96); }
+.brand-text small, footer .brand-text small { color: var(--muted); }
+.header nav { color: #526b5a; }
+.header nav a:hover, .header-cta:hover { color: #68856c; }
+.eyebrow, .cat, .category { color: #68856c; }
+.hero { background: #f7f8f2; }
+.hero h1, .section-heading h2, .closing h2 { color: #263d32; }
+.hero h1 em, .section-heading h2 em, .closing h2 em { color: #68856c; }
+/* .lead, .section-heading > p { color: #68796e; } */
+.section-heading > p { color: #68796e; }
+.button { background: #344f40; color: #fff; }
+.button:hover { background: #56775f; }
+
+/* Remove the dark brown tint over the hero image. */
+.hero-art:after { background: linear-gradient(180deg, transparent 48%, rgba(24, 42, 32, 0.28)); }
+.hero-art > img { background: #e9efe4; }
+.stamp { border-color: #c9c49a; background: #f5f4e8; color: #4a634e; }
+.stamp b { color: #68856c; }
+.ribbon { background: #e9efe4; border-color: #dbe4d6; color: #526b56; }
+.collection { background: #fff; }
+.toolbar { border-color: var(--line); }
+.chip { color: #68796e; }
+.chip:hover { border-color: #c5d3c3; }
+.chip.active { background: #344f40; border-color: #344f40; color: #fff; }
+.search { background: #fff; color: #68796e; }
+.search input { color: #263d32; }
+.card-image { background: #e9efe4; }
+.card-image img.broken, .item img.broken { background: linear-gradient(135deg, #e9efe4, #cbd9c8); }
+.tag { background: rgba(255,255,255,.94); color: #526b56; }
+.arrow { background: #fff; color: #263d32; }
+.card:hover .arrow { background: #344f40; color: #fff; }
+.card-bottom > span, .hint { color: #718276; }
+.closing { background: #e9efe4; }
+.flower { color: rgba(184, 163, 106, .35); }
+footer { background: #263d32; color: #f7f8f2; }
+footer .monogram { color: #f7f8f2; border-color: #b8a36a; }
+footer .brand-text small { color: #d0d9ce; }
+footer .brand-text i { color: #d9ca93; }
+footer p, footer > small { color: #d0d9ce; }
+.backdrop { background: rgba(24, 42, 32, .62); }
+.dialog { background: #fff; }
+.close { border-color: rgba(38,61,50,.2); background: rgba(255,255,255,.96); color: #263d32; }
+.detail-cover { background: #e9efe4; }
+.description { color: #68796e; }
+.items-heading { border-color: var(--line); }
+.item { border-color: var(--line); }
+.item img { background: #e9efe4; }
+.item-copy p, .disclaimer { color: #718276; }
+.weight { color: #68856c; }
+
+@media (max-width: 650px) {
+  .header nav { background: var(--cream); }
+}
