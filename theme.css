@@ -38,6 +38,9 @@ body { background: var(--cream); color: var(--brown); }
 .chip { color: #68796e; }
 .chip:hover { border-color: #c5d3c3; }
 .chip.active { background: #344f40; border-color: #344f40; color: #fff; }
+
+/* Highlight the out-of-stock label on hamper 6. */
+.card[data-id="everyday-thoughtful"] .name { color: #c62828; }
 .search { background: #fff; color: #68796e; }
 .search input { color: #263d32; }
 .card-image { background: #e9efe4; }

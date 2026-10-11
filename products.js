@@ -34,7 +34,7 @@ const hampers = [
 
   {
     id: "festive-delight",
-    name: "Festive Delight",
+    name: "Shahi Andaz",
     category: "Festive",
     price: 459,
     tag: "A festive favourite",
@@ -93,14 +93,14 @@ const hampers = [
 
   {
     id: "sweet-celebration",
-    name: "Sweet Celebration",
+    name: "Shahi Dawat",
     category: "Sweets",
     price: 379,
     tag: "Made for sweet moments",
     description:
       "A sweet little collection for sharing warm wishes, celebrating milestones and making ordinary days feel special.",
     image:
-      "public/hamper3.webp",
+      "public/hamper3.png",
     items: [
       {
         name: "Sadabahar Soan Papdi",
@@ -140,14 +140,14 @@ const hampers = [
 
   {
     id: "namkeen-nibbles",
-    name: "Namkeen Nibbles",
+    name: "Namkeen Dawat",
     category: "Namkeen",
     price: 289,
     tag: "For the savoury soul",
     description:
       "A savoury selection for snack lovers—perfect for a relaxed get-together or a thoughtful festive gesture.",
     image:
-        "public/hamper2.webp",
+        "public/hamper2.png",
     
     items: [
       {
@@ -188,7 +188,7 @@ const hampers = [
 
   {
     id: "little-luxuries",
-    name: "Little Luxuries",
+    name: "Thoda Mitha, Thoda Namkeen",
     category: "Premium",
     price: 269,
     tag: "A little extra love",
@@ -223,7 +223,7 @@ const hampers = [
 
   {
     id: "warm-wishes",
-    name: "Warm Wishes",
+    name: "Picnic",
     category: "Festive",
     price: 169,
     tag: "Small gesture, big heart",
@@ -248,7 +248,7 @@ const hampers = [
         name: "Bikaneri Papdi",
         weight: 75,
         image:
-          "https://images.unsplash.com/photo-1548907040-4d42e3f2b6d6?auto=format&fit=crop&w=500&q=80"
+          "public/bikaneripapdi.png"
       },
       {
         name: "Sab Kuch (Navratan Mix)",

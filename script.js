@@ -6,9 +6,12 @@
   const filters = $("filters");
   const search = $("search");
   const modal = $("modal");
+  const dialog = modal.querySelector(".dialog");
 
   let category = "All";
   let focused = null;
+  let touchStartY = null;
+  let swipeHandled = false;
 
   const price = amount =>
     new Intl.NumberFormat("en-IN", {
@@ -128,6 +131,8 @@
     `).join("") || "<p>Item details coming soon.</p>";
 
     modal.hidden = false;
+    dialog.classList.remove("is-expanded");
+    dialog.scrollTop = 0;
     document.body.classList.add("locked");
     $("close").focus();
   }
@@ -160,6 +165,56 @@
   modal.addEventListener("click", event => {
     if (event.target === modal) closeHamper();
   });
+
+  dialog.addEventListener("touchstart", event => {
+    if (window.matchMedia("(max-width: 650px)").matches) {
+      touchStartY = event.touches[0].clientY;
+      swipeHandled = false;
+    }
+  }, { passive: true });
+
+  dialog.addEventListener("touchmove", event => {
+    if (touchStartY === null || swipeHandled) return;
+
+    const swipeDistance = event.touches[0].clientY - touchStartY;
+    const isExpanded = dialog.classList.contains("is-expanded");
+
+    if (swipeDistance < -30 && !isExpanded) {
+      dialog.classList.add("is-expanded");
+      dialog.scrollTop = 0;
+      swipeHandled = true;
+    } else if (swipeDistance > 30 && isExpanded && dialog.scrollTop <= 0) {
+      dialog.classList.remove("is-expanded");
+      dialog.scrollTop = 0;
+      swipeHandled = true;
+    }
+  }, { passive: true });
+
+  dialog.addEventListener("touchend", event => {
+    if (touchStartY === null) return;
+
+    const swipeDistance = event.changedTouches[0].clientY - touchStartY;
+    touchStartY = null;
+
+    if (!swipeHandled && swipeDistance < -30 && !dialog.classList.contains("is-expanded")) {
+      dialog.classList.add("is-expanded");
+      dialog.scrollTop = 0;
+    } else if (
+      !swipeHandled &&
+      swipeDistance > 30 &&
+      dialog.classList.contains("is-expanded") &&
+      dialog.scrollTop <= 0
+    ) {
+      dialog.classList.remove("is-expanded");
+      dialog.scrollTop = 0;
+    }
+    swipeHandled = false;
+  }, { passive: true });
+
+  dialog.addEventListener("touchcancel", () => {
+    touchStartY = null;
+    swipeHandled = false;
+  }, { passive: true });
 
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && !modal.hidden) {
