@@ -81,7 +81,7 @@ const hampers = [
       },
       {
         name: "Little Hearts",
-        weight: 40,
+        weight: 14,
         image:
           "https://m.media-amazon.com/images/I/7162ZSYe48L.jpg"
       }
@@ -271,6 +271,7 @@ const hampers = [
   {
     id: "everyday-thoughtful",
     name: "Out Of Stock!!!!",
+    outOfStock: true,
     category: "Everyday",
     price: 569,
     tag: "A gift for any day",

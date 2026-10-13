@@ -47,7 +47,7 @@ body { background: var(--cream); color: var(--brown); }
 .card-image img.broken, .item img.broken { background: linear-gradient(135deg, #e9efe4, #cbd9c8); }
 .tag { background: rgba(255,255,255,.94); color: #526b56; }
 .arrow { background: #fff; color: #263d32; }
-.card:hover .arrow { background: #344f40; color: #fff; }
+.card:not(:disabled):hover .arrow { background: #344f40; color: #fff; }
 .card-bottom > span, .hint { color: #718276; }
 .closing { background: #e9efe4; }
 .flower { color: rgba(184, 163, 106, .35); }

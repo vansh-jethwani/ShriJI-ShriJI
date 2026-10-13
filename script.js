@@ -70,8 +70,9 @@
       <button
         class="card"
         data-id="${esc(hamper.id)}"
+        ${hamper.outOfStock ? "disabled" : ""}
         style="--i:${index}"
-        aria-label="Explore ${esc(hamper.name)}"
+        aria-label="${hamper.outOfStock ? "Out of stock: " : "Explore "}${esc(hamper.name)}"
       >
         <span class="card-image">
           ${img(hamper.image, hamper.name)}
@@ -87,7 +88,7 @@
 
           <span class="card-bottom">
             <b>${price(hamper.price)}</b>
-            <span>Explore hamper →</span>
+            <span>${hamper.outOfStock ? "Out of stock" : "Explore hamper →"}</span>
           </span>
         </span>
       </button>
@@ -98,7 +99,7 @@
 
   function openHamper(id, trigger) {
     const hamper = hampers.find(item => item.id === id);
-    if (!hamper) return;
+    if (!hamper || hamper.outOfStock) return;
 
     focused = trigger || document.activeElement;
 
@@ -154,7 +155,7 @@
 
   grid.addEventListener("click", event => {
     const button = event.target.closest("[data-id]");
-    if (button) openHamper(button.dataset.id, button);
+    if (button && !button.disabled) openHamper(button.dataset.id, button);
   });
 
   $("close").addEventListener("click", closeHamper);
