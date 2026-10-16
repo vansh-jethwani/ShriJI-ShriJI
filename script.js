@@ -116,18 +116,23 @@
     const items = hamper.items || [];
     $("count").textContent = `${items.length} items`;
 
-    $("items").innerHTML = items.map(item => `
-      <article class="item">
-        ${img(item.image, item.name)}
+    $("items").innerHTML = items.map(item => {
+      const options = item.options || [item];
 
-        <div class="item-copy">
-          <h4>${esc(item.name)}</h4>
-          <p>Included in this hamper</p>
-        </div>
+      return options.map((option, index) => `
+        ${index ? '<div class="item-choice-or" aria-label="or">OR</div>' : ""}
+        <article class="item">
+          ${img(option.image, option.name)}
 
-        <b class="weight">${Number(item.weight) || 0} g</b>
-      </article>
-    `).join("") || "<p>Item details coming soon.</p>";
+          <div class="item-copy">
+            <h4>${esc(option.name)}</h4>
+            <p>${item.options ? "Choose one" : "Included in this hamper"}</p>
+          </div>
+
+          <b class="weight">${Number(option.weight ?? item.weight) || 0} g</b>
+        </article>
+      `).join("");
+    }).join("") || "<p>Item details coming soon.</p>";
 
     modal.hidden = false;
     dialog.scrollTop = 0;

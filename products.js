@@ -31,6 +31,118 @@ const hampers = [
 
     // Hamper 1
 
+    {
+    id: "Hamper1",
+    name: "Anupam Uphaar",
+    category: "Handcrafted Gift Baskets",
+    price: 679,
+    tag: "The Ultimate Diwali Gift",
+    description:
+      "A carefully curated assortment of sweet and savory treats designed to make celebrations unforgettable.",
+    image:
+      "public/hamper1.png",
+    items: [
+      {
+        name: "Anjeer Dry Fruit Burfee",
+        weight: 250,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/0/2/02_-anjeer-dry-fruit-burfee-domestic_500g__fop.png"
+      },
+      {
+        name: "Punjabi Tadka",
+        weight: 200,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/p/u/punjabi-tadka-200g_fop.png"
+      },
+      {
+        name: "Kashmiri Mix",
+        weight: 150,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/6517c62f5899ad6aa0ba23ceb3eeff97/0/8/08_-kashmiri-mix-150gm-pouch_zipper_-fop.png"
+      },
+      {
+        name: "Jim Jam",
+        weight: 57,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_YLE0GqTUrDMECrXcTXRiMZaEerfCFNKuo2ShiHoUA&s=10"
+      },
+      {
+        name: "Treat Croissant",
+        weight: 45,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEXnRWo05NpgMBlli7tWYqx6hoYn-8BwEbf7AWMjMIw&s=10"
+      },
+      {
+        name: "Korean Chips",
+        weight: 28,
+        image:
+          "public/korean.png"
+      }
+    ]
+  },
+
+  // Hamper 2
+
+  {
+    id: "Hamper2",
+    name: "Shahi Nazrana",
+    category: "Premium Festive",
+    price: 520,
+    tag: "Royal Festive Celebration",
+    description:
+      "An exquisite collection of traditional delicacies wrapped in regal elegance for your loved ones.",
+    image:
+      "public/hamper2.png",
+    items: [
+      {
+        options: [
+          {
+            name: "Kaju Katli",
+            image:
+              "https://www.sweetsandsnacks.in/wp-content/uploads/2019/03/kajukatli.jpg"
+          },
+          {
+            name: "Mango Burfi",
+            image:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDv5K1lnyJOOdULaHKRJVa7d1-8bRTXl6yRd4442xKpA&s=10"
+          }
+        ],
+        weight: 250,
+      },
+      {
+        name: "Punjabi Tadka",
+        weight: 200,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/p/u/punjabi-tadka-200g_fop.png"
+      },
+      {
+        name: "Kashmiri Mix",
+        weight: 150,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/6517c62f5899ad6aa0ba23ceb3eeff97/0/8/08_-kashmiri-mix-150gm-pouch_zipper_-fop.png"
+      },
+      {
+        name: "Jim Jam",
+        weight: 57,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_YLE0GqTUrDMECrXcTXRiMZaEerfCFNKuo2ShiHoUA&s=10"
+      },
+      {
+        name: "Treat Croissant",
+        weight: 45,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEXnRWo05NpgMBlli7tWYqx6hoYn-8BwEbf7AWMjMIw&s=10"
+      },
+      {
+        name: "Korean Chips",
+        weight: 28,
+        image:
+          "public/korean.png"
+      }
+    ]
+  },
+
+  // Hamper 3
 
   {
     id: "festive-delight",
@@ -41,7 +153,7 @@ const hampers = [
     description:
       "A joyful assortment of traditional favourites and savoury treats, brought together for the season of sharing.",
     image:
-      "/public/hamper1.webp",
+      "/public/hamper3.webp",
     items: [
       {
         name: "Gulab Jamun",
@@ -88,7 +200,7 @@ const hampers = [
     ]
   },
 
-//   Hamper 2
+//   Hamper 4
 
 
   {
@@ -100,7 +212,7 @@ const hampers = [
     description:
       "A sweet little collection for sharing warm wishes, celebrating milestones and making ordinary days feel special.",
     image:
-      "public/hamper3.png",
+      "public/hamper4.png",
     items: [
       {
         name: "Sadabahar Soan Papdi",
@@ -115,16 +227,16 @@ const hampers = [
           "https://www.bikaji.com/pub/media/catalog/product/cache/6517c62f5899ad6aa0ba23ceb3eeff97/0/8/08_-kashmiri-mix-150gm-pouch_zipper_-fop.png"
       },
       {
-        name: "Puff Corn",
-        weight: 35,
-        image:
-          "public/puffcorn.webp"
-      },
-      {
         name: "Khokha Bhujia",
         weight: 40,
         image:
           "https://rukmini1.flixcart.com/image/300/300/jwuzzww0/snack-savourie/r/b/s/400-bhujia-khattha-meetha-tana-bana-ratlami-chatpata-sev-pouch-original-imaff3p3fgrczhnq.jpeg"
+      },
+      {
+        name: "Puff Corn",
+        weight: 35,
+        image:
+          "public/puffcorn.webp"
       },
       {
         name: "Britannia Layerz Layer Cake",
@@ -135,7 +247,7 @@ const hampers = [
     ]
   },
 
-//   Hamper 3
+//   Hamper 5
 
 
   {
@@ -147,7 +259,7 @@ const hampers = [
     description:
       "A savoury selection for snack lovers—perfect for a relaxed get-together or a thoughtful festive gesture.",
     image:
-        "public/hamper2.png",
+        "public/hamper5.png",
     
     items: [
       {
@@ -183,7 +295,7 @@ const hampers = [
     ]
   },
 
-//   Hamper 4
+//   Hamper 6
 
 
   {
@@ -195,7 +307,7 @@ const hampers = [
     description:
       "A considered mix of indulgent treats in a gift-ready presentation, made for moments that deserve something extra.",
     image:
-      "public/hamper4.png",
+      "public/hamper6.png",
     items: [
       {
         name: "Manbhawan Soan Papdi",
@@ -218,8 +330,87 @@ const hampers = [
     ]
   },
 
-//   Hamper 5
+  // Hamper 7
 
+{
+    id: "Hamper7",
+    name: "Utsav Manika",
+    category: "Luxury Festive",
+    price: 200,
+    tag: "A Touch of Elegance",
+    description:
+      "Delightfully packaged festive goodies bringing warmth, joy, and rich flavors to every home.",
+    image:
+      "public/hamper7.png",
+    items: [
+      {
+        name: "Punjabi Tadka",
+        weight: 200,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/p/u/punjabi-tadka-200g_fop.png"
+      },
+      {
+        name: "Soan Cake",
+        weight: 200,
+        image:
+          "https://nagabazaar.com/cdn/shop/files/Untitleddesign-2026-07-27T131354.716.png?v=1785138284"
+      },
+      {
+        name: "Khokha Bhujia",
+        weight: 40,
+        image:
+          "https://rukmini1.flixcart.com/image/300/300/jwuzzww0/snack-savourie/r/b/s/400-bhujia-khattha-meetha-tana-bana-ratlami-chatpata-sev-pouch-original-imaff3p3fgrczhnq.jpeg"
+      },
+      {
+        name: "Puff Corn",
+        weight: 35,
+        image:
+          "public/puffcorn.webp"
+      }
+    ]
+  },
+
+  // Hamper 8
+  
+  {
+    id: "hamper8",
+    name: "Rajasi Pitara",
+    category: "Assortments",
+    price: 190,
+    tag: "Pure Traditions",
+    description:
+      "A grand festive box brimming with authentic snacks and sweets for magnificent Diwali gifting.",
+    image:
+      "public/hamper8.png",
+    items: [
+      {
+        name: "Manbhawan Soan Papdi",
+        weight: 200,
+        image:
+          "https://www.bikaji.com/pub/media/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/m/a/manbhawan-soanpapdi_domestic_900gm_fop.png"
+      },
+      {
+        name: "Pudhina Chips",
+        weight: 150,
+        image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGIbC16jSETTt3fHWqlXv-4DSPykI-jaclp47cK92zrg&s=10"
+      },
+      {
+        name: "Kuram Kuram",
+        weight: 40,
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiWwD4064yPg2yvP2yZqcSY2p8pGh2zfMgPZXl0orYWQ&s=10"
+      },
+      {
+        name: "Energy Snack",
+        weight: 40,
+        image:
+          "public/energy.png"
+      }
+    ]
+  },
+
+  // Hamper 9
 
   {
     id: "warm-wishes",
@@ -230,7 +421,7 @@ const hampers = [
     description:
       "A cheerful hamper of familiar favourites, assembled to make a simple thank-you or festive visit feel meaningful.",
     image:
-      "public/hamper5.png",
+      "public/hamper9.png",
     items: [
       {
         name: "Manbhawan Soan Papdi",
@@ -265,7 +456,7 @@ const hampers = [
     ]
   },
 
-//   Hamper 6
+//   Hamper 10
 
 
   {
@@ -278,7 +469,7 @@ const hampers = [
     description:
       "A simple, warm selection for hosts, colleagues, neighbours or anyone who could use a little surprise.",
     image:
-      "public/hamper6.jpeg",
+      "public/hamper10.jpeg",
     items: [
       {
         name: "Bikaneri Rasgulla",

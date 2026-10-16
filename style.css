@@ -781,6 +781,23 @@ footer > small {
   border-bottom: 1px solid var(--line);
 }
 
+.item-choice-or {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.item-choice-or::before,
+.item-choice-or::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+}
+
 .item img {
   flex: 0 0 64px;
   width: 64px;
